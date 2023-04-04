@@ -3,10 +3,17 @@
     height: 10vh;
     display: flex;
     color: white;
-    background-color: darkblue;
+    background-color: black;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.containerNavbar ul {
+    display: flex;
+    list-style-type: none;
     justify-content: space-between;
 }
 
-ul {
-    list-style-type: none;
+.containerNavbar li {
+    padding: 10px;
 }
