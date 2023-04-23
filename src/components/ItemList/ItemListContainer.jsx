@@ -1,19 +1,27 @@
-import styles from "./ItemListContainer.module.css"
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import { products } from "../../products.Mock";
 
+const ItemListContainer = () => {
 
-const ItemList = ({ saludo, nombre }) => {
+    const [items, setItems] = useState([])
 
+    useEffect(() => {
+        const task = new Promise((resolve, reject) => {
+            resolve(products);
+        });
 
+        task
+            .then((res) => setItems(res))
+            .catch((error) => console.log("catch: ", error));
+    }, [])
 
     return (
-        <div className={styles.ItemListContainer}>
-            <h2>{saludo}</h2>
-            <h2>{nombre}</h2>
-            <h2>A</h2>
-            <h1>Gallogamer3D</h1>
+        <div>
+            <ItemList items={items} />
         </div>
 
-    )
-}
+    );
+};
 
-export default ItemList
+export default ItemListContainer;

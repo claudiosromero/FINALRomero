@@ -11,7 +11,7 @@ const Navbar = () => {
         <li>Home</li>
         <li>Robert</li>
         <li>Figuras</li>
-        <li>Para tu Mascota</li>
+        <li>Accesorios</li>
         <li>Contacto</li>
       </ul>
       <CardWidget />
