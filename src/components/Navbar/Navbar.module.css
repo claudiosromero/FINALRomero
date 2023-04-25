@@ -8,15 +8,20 @@
     font-size: 30px;
 }
 
-.containerNavbar ul {
+.containerNavbar {
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.containerNavbar li {
+.containerNavbar a {
+    text-decoration: none;
+    width: 150px;
+    background-color: cornflowerblue;
+    padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 5px;
     border-radius: 10%;
     border: solid 2px darkblue;

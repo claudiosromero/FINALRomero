@@ -7,10 +7,13 @@ import {
     Typography,
 } from "@mui/material"
 
+import { Link } from "react-router-dom";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
+
 const ItemCard = ({ item }) => {
     return (
 
-        <Card sx={{ Width: 400, margin: 1 }} >
+        <Card sx={{ Width: 365, margin: 1 }} >
             <CardMedia
                 sx={{ height: 200 }}
                 image={item.img}
@@ -26,12 +29,15 @@ const ItemCard = ({ item }) => {
                 <Typography variant="body2" color="primary">
                     ${item.price}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {item.stock}
+                <Typography variant="body2" color="text.secondary">Disponobles: {item.stock} Unidades
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button variant="contained" size="small">Mas Detalles</Button>
+                <Link to={`/ItemDetail/${item.id}`}>
+                    <Button variant="contained" size="small">
+                        Mas Detalles
+                    </Button>
+                </Link>
             </CardActions>
         </Card>
 

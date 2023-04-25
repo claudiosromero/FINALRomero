@@ -8,7 +8,7 @@ export const products = [
 
         price: 15000,
 
-        stock: 2,
+        stock: 3,
 
         description: "Busto de Deepool 15 cm",
 
@@ -26,7 +26,7 @@ export const products = [
 
         price: 10000,
 
-        stock: 2,
+        stock: 1,
 
         description: "Figura a escala de Goku 1/6",
 
@@ -62,7 +62,7 @@ export const products = [
 
         price: 800,
 
-        stock: 2,
+        stock: 8,
 
         description: "Ideal para el orden de tu escritorio",
 
@@ -80,7 +80,7 @@ export const products = [
 
         price: 1500,
 
-        stock: 2,
+        stock: 10,
 
         description: "Manten ordenado tu espacio de trabajo con este porta pinceles",
 
@@ -98,7 +98,7 @@ export const products = [
 
         price: 500,
 
-        stock: 2,
+        stock: 20,
 
         description: "Compatible con celulares y tablets",
 
