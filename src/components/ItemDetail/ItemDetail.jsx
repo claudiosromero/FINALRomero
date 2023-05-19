@@ -2,18 +2,13 @@ import React from "react";
 import styles from "./ItemDetail.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-import useCounter from '../../utils/hooks/useCounter'
-
-
-export const ItemDetail = ({ product, onAdd }) => {
-
-    const { counter, increment, decrement } = useCounter()
-
+import CounterContainer from "../Counter/CounterContainer";
+export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
     return (
-        <div>
+        <div style={{ marginTop: "50px", display: "flex", gap: "30px" }}>
             <div className={styles.containerItemDetail}>
                 <div className={styles.containerImage}>
-                    <img src={product.img} alt="" />
+                    <img style={{ maxHeight: "300px", maxWidth: "200px" }} src={product.img} alt="" />
                 </div>
 
                 <div className={styles.containerDetail}>
@@ -28,17 +23,17 @@ export const ItemDetail = ({ product, onAdd }) => {
                         <span style={{ fontSize: "23px" }}>Precio:</span> ${product.price}.-
                     </h2>
                 </div>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal}/>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <Link to="/">
+                        <Button variant="contained">Regresar</Button>
+                    </Link>
+                </div>
             </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <button onClick={decrement}>-</button>
-                <span> {counter} </span>
-                <button onClick={increment}>+</button>
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <Link to="/">
-                    <Button variant="contained">Regresar</Button>
-                </Link>
-            </div>
+
+
         </div>
     );
 };

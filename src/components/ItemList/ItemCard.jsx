@@ -15,7 +15,7 @@ const ItemCard = ({ item }) => {
 
         <Card sx={{ Width: 365, margin: 1 }} >
             <CardMedia
-                sx={{ height: 200 }}
+                sx={{ height: 200, width: 200 }}
                 image={item.img}
                 title={item.title}
             />

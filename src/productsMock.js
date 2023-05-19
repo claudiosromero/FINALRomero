@@ -26,7 +26,7 @@ export const products = [
 
         price: 10000,
 
-        stock: 1,
+        stock: 7,
 
         description: "Figura a escala de Goku 1/6",
 
@@ -44,7 +44,7 @@ export const products = [
 
         price: 9000,
 
-        stock: 2,
+        stock: 5,
 
         description: "Figura de Grogu 13 cm",
 
@@ -64,7 +64,7 @@ export const products = [
 
         stock: 8,
 
-        description: "Ideal para el orden de tu escritorio",
+        description: "Ideal para el orden",
 
         category: "accesorios",
 
@@ -82,7 +82,7 @@ export const products = [
 
         stock: 10,
 
-        description: "Manten ordenado tu espacio de trabajo con este porta pinceles",
+        description: "Todo ordenado tu espacio",
 
         category: "accesorios",
 
@@ -100,7 +100,7 @@ export const products = [
 
         stock: 20,
 
-        description: "Compatible con celulares y tablets",
+        description: "Para celulares y tablets",
 
         category: "accesorios",
 
@@ -116,7 +116,7 @@ export const products = [
 
         price: 1000,
 
-        stock: 2,
+        stock: 9,
 
         description: "",
 
@@ -134,7 +134,7 @@ export const products = [
 
         price: 1000,
 
-        stock: 2,
+        stock: 5,
 
         description: "",
 
@@ -147,11 +147,11 @@ export const products = [
 
         id: 9,
 
-        title: "Robert Meditando",
+        title: "Robert Yoga",
 
         price: 1000,
 
-        stock: 2,
+        stock: 4,
 
         description: "",
 
