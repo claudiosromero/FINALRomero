@@ -1,0 +1,11 @@
+.cart {
+    display: flex;
+    border-bottom: solid blue 2px;
+    width: 900px;
+    justify-content: space-between;
+}
+
+.cartPadre {
+    display: flex;
+    justify-content: center;
+}

@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { ItemDetail } from './ItemDetail'
 import { products } from '../../productsMock'
 import { useParams } from "react-router-dom"
-import { createContext } from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import Swal from 'sweetalert2'
+
 
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
 
-    const { agregarAlCarrito, getQuantityById } = useContext(CartContext)
+    const { agregarAlCarrito, getQuantityById, cart } = useContext(CartContext)
 
     const { id } = useParams()
 
@@ -27,6 +28,13 @@ export const ItemDetailContainer = () => {
 
         agregarAlCarrito(data)
 
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Agregaste ${product.title} al Carrito!`,
+            showConfirmButton: false,
+            timer: 1500
+        })
 
     }
 
@@ -35,8 +43,8 @@ export const ItemDetailContainer = () => {
 
     return (
         <div>
-            <ItemDetail product={product} onAdd={onAdd} cantidadTotal={cantidadTotal} />
+            <ItemDetail product={product} onAdd={onAdd} cantidadTotal={cantidadTotal} cart={cart} />
 
         </div>
     )
-}
+};

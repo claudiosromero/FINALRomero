@@ -3,9 +3,11 @@ import styles from "./ItemDetail.module.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import CounterContainer from "../Counter/CounterContainer";
-export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
+
+
+export const ItemDetail = ({ product, onAdd, cantidadTotal, cart }) => {
     return (
-        <div style={{ marginTop: "50px", display: "flex", gap: "30px" }}>
+        <div style={{ marginTop: "100px", display: "flex", gap: "30px" }}>
             <div className={styles.containerItemDetail}>
                 <div className={styles.containerImage}>
                     <img style={{ maxHeight: "300px", maxWidth: "200px" }} src={product.img} alt="" />
@@ -24,13 +26,25 @@ export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
                     </h2>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                    <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal}/>
+                    <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal} />
                 </div>
-                <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ display: "flex", justifyContent: "center", }}>
                     <Link to="/">
-                        <Button variant="contained">Regresar</Button>
+                        <Button style={{marginRight:"10px"}} variant="contained">Regresar</Button>
                     </Link>
+                    {cart.length > 0 &&
+
+                        <Link to="/Cart">
+                            <Button variant="contained" color='success'>Comprar</Button>
+                        </Link>
+
+                    }
                 </div>
+
+
+
+
+
             </div>
 
 
